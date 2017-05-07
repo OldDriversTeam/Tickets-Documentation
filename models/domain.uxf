@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <diagram program="umlet" version="14.1.1">
-  <zoom_level>10</zoom_level>
+  <zoom_level>11</zoom_level>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>280</x>
-      <y>350</y>
-      <w>100</w>
-      <h>80</h>
+      <x>1155</x>
+      <y>649</y>
+      <w>110</w>
+      <h>88</h>
     </coordinates>
     <panel_attributes>user
 --
@@ -19,36 +19,23 @@ password</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>280</x>
-      <y>220</y>
-      <w>100</w>
-      <h>50</h>
-    </coordinates>
-    <panel_attributes>basket
---
-</panel_attributes>
-    <additional_attributes/>
-  </element>
-  <element>
-    <id>UMLClass</id>
-    <coordinates>
-      <x>620</x>
-      <y>290</y>
-      <w>100</w>
-      <h>50</h>
+      <x>1155</x>
+      <y>473</y>
+      <w>110</w>
+      <h>66</h>
     </coordinates>
     <panel_attributes>order
 --
-</panel_attributes>
+number</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>620</x>
-      <y>510</y>
-      <w>100</w>
-      <h>50</h>
+      <x>396</x>
+      <y>275</y>
+      <w>110</w>
+      <h>55</h>
     </coordinates>
     <panel_attributes>cinema
 --
@@ -58,127 +45,251 @@ name</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>1030</x>
-      <y>510</y>
-      <w>100</w>
-      <h>60</h>
+      <x>737</x>
+      <y>275</y>
+      <w>110</w>
+      <h>88</h>
     </coordinates>
     <panel_attributes>movie
 --
 name
-time</panel_attributes>
+release_date
+onshow</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>820</x>
-      <y>510</y>
-      <w>100</w>
-      <h>60</h>
+      <x>396</x>
+      <y>473</y>
+      <w>110</w>
+      <h>55</h>
     </coordinates>
     <panel_attributes>room
 --
-name
-seat</panel_attributes>
+name</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>320</x>
-      <y>260</y>
-      <w>70</w>
-      <h>110</h>
-    </coordinates>
-    <panel_attributes>lt=-
-m1=1
-m2=1
-has &gt;</panel_attributes>
-    <additional_attributes>10.0;90.0;10.0;10.0</additional_attributes>
-  </element>
-  <element>
-    <id>Relation</id>
-    <coordinates>
-      <x>370</x>
-      <y>230</y>
-      <w>340</w>
-      <h>80</h>
+      <x>1199</x>
+      <y>528</y>
+      <w>77</w>
+      <h>143</h>
     </coordinates>
     <panel_attributes>lt=-
 m1=1
 m2=0..n
 has &gt;</panel_attributes>
-    <additional_attributes>10.0;20.0;300.0;20.0;300.0;60.0</additional_attributes>
+    <additional_attributes>10.0;110.0;10.0;10.0</additional_attributes>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>710</x>
-      <y>520</y>
-      <w>130</w>
-      <h>50</h>
+      <x>440</x>
+      <y>319</y>
+      <w>77</w>
+      <h>176</h>
     </coordinates>
     <panel_attributes>lt=-
 m1=1
 m2=1..n
 has &gt;</panel_attributes>
-    <additional_attributes>10.0;20.0;110.0;20.0</additional_attributes>
+    <additional_attributes>10.0;10.0;10.0;140.0</additional_attributes>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>910</x>
-      <y>520</y>
-      <w>140</w>
-      <h>50</h>
+      <x>495</x>
+      <y>484</y>
+      <w>253</w>
+      <h>55</h>
     </coordinates>
     <panel_attributes>lt=-
 m1=1
 m2=0..n
 has &gt;</panel_attributes>
-    <additional_attributes>10.0;20.0;120.0;20.0</additional_attributes>
+    <additional_attributes>10.0;20.0;210.0;20.0</additional_attributes>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>650</x>
-      <y>330</y>
-      <w>70</w>
-      <h>200</h>
+      <x>825</x>
+      <y>484</y>
+      <w>121</w>
+      <h>55</h>
+    </coordinates>
+    <panel_attributes>lt=-
+m1=0..n
+m2=1
+has &gt;</panel_attributes>
+    <additional_attributes>90.0;20.0;10.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>495</x>
+      <y>286</y>
+      <w>264</w>
+      <h>55</h>
+    </coordinates>
+    <panel_attributes>lt=-
+m1=1..n
+m2=1..n
+has &gt;</panel_attributes>
+    <additional_attributes>10.0;20.0;220.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>726</x>
+      <y>473</y>
+      <w>110</w>
+      <h>66</h>
+    </coordinates>
+    <panel_attributes>show
+--
+date_time</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>770</x>
+      <y>352</y>
+      <w>77</w>
+      <h>143</h>
+    </coordinates>
+    <panel_attributes>lt=-
+m1=1
+m2=1..n
+has &gt;</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;110.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>979</x>
+      <y>275</y>
+      <w>110</w>
+      <h>66</h>
+    </coordinates>
+    <panel_attributes>movie_type
+--
+type_name</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>836</x>
+      <y>297</y>
+      <w>165</w>
+      <h>55</h>
+    </coordinates>
+    <panel_attributes>lt=-
+m1=1
+m2=0..n
+has &gt;</panel_attributes>
+    <additional_attributes>130.0;20.0;10.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>396</x>
+      <y>627</y>
+      <w>110</w>
+      <h>88</h>
+    </coordinates>
+    <panel_attributes>room_type
+--
+type_name
+row
+col</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>429</x>
+      <y>517</y>
+      <w>77</w>
+      <h>132</h>
+    </coordinates>
+    <panel_attributes>lt=-
+m1=1
+m2=0..n
+has &gt;</panel_attributes>
+    <additional_attributes>10.0;100.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>924</x>
+      <y>473</y>
+      <w>110</w>
+      <h>66</h>
+    </coordinates>
+    <panel_attributes>ticket
+--
+price</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1023</x>
+      <y>484</y>
+      <w>154</w>
+      <h>55</h>
+    </coordinates>
+    <panel_attributes>lt=-
+m1=1
+m2=1..n
+has &gt;</panel_attributes>
+    <additional_attributes>120.0;20.0;10.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>154</x>
+      <y>473</y>
+      <w>110</w>
+      <h>55</h>
+    </coordinates>
+    <panel_attributes>seat
+--
+number
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>253</x>
+      <y>484</y>
+      <w>165</w>
+      <h>55</h>
+    </coordinates>
+    <panel_attributes>lt=-
+m1=1
+m2=0..n
+has &gt;</panel_attributes>
+    <additional_attributes>130.0;20.0;10.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>187</x>
+      <y>517</y>
+      <w>825</w>
+      <h>253</h>
     </coordinates>
     <panel_attributes>lt=-
 m1=1
 m2=1
 has &gt;</panel_attributes>
-    <additional_attributes>10.0;10.0;10.0;180.0</additional_attributes>
-  </element>
-  <element>
-    <id>Relation</id>
-    <coordinates>
-      <x>710</x>
-      <y>310</y>
-      <w>180</w>
-      <h>220</h>
-    </coordinates>
-    <panel_attributes>lt=-
-m1=1
-m2=1
-has &gt;</panel_attributes>
-    <additional_attributes>10.0;20.0;160.0;20.0;160.0;200.0</additional_attributes>
-  </element>
-  <element>
-    <id>Relation</id>
-    <coordinates>
-      <x>710</x>
-      <y>280</y>
-      <w>390</w>
-      <h>250</h>
-    </coordinates>
-    <panel_attributes>lt=-
-m1=1
-m2=1
-has &gt;</panel_attributes>
-    <additional_attributes>10.0;20.0;370.0;20.0;370.0;230.0</additional_attributes>
+    <additional_attributes>730.0;20.0;730.0;210.0;10.0;210.0;10.0;10.0</additional_attributes>
   </element>
 </diagram>
