@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="14.1.1">
+  <zoom_level>10</zoom_level>
+  <element>
+    <id>UMLHierarchy</id>
+    <coordinates>
+      <x>80</x>
+      <y>80</y>
+      <w>410</w>
+      <h>520</h>
+    </coordinates>
+    <panel_attributes>type=Package
+src
+	main
+		java
+			com.olddrivers.tickets
+				business
+					entities
+						repository
+				util
+				web
+		resources
+			META-INF
+		webapp
+			WEB-INF
+	test
+		java.test</panel_attributes>
+    <additional_attributes/>
+  </element>
+</diagram>
