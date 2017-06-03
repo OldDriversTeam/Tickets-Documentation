@@ -47,7 +47,7 @@ Request URI
 GET /api/cinemas/{id}
 ```
 Response Format
-```json
+```
 {
 	"id":String,
 	"name":String,
@@ -65,7 +65,7 @@ Request URI
 GET /api/movies/{id}
 ```
 Response Format
-```json
+```
 {
 	"id":String,
 	"name":String,
@@ -86,7 +86,7 @@ Request URI
 GET /api/movies/onshow
 ```
 Response Format
-```json
+```
 {
 "size":Interger,
 "movieList": [
@@ -113,7 +113,7 @@ Request URI
 GET /api/rooms/{id}
 ```
 Response Format
-```json
+```
 {
 	"id":String
 	"type":String
@@ -131,7 +131,7 @@ Request URI
 GET /api/showings/{id}
 ```
 Response Format
-```json
+```
 {
 	"id":String
 	"date":String
@@ -149,7 +149,7 @@ Request URI
 GET /api/showings/movie/{movieId}
 ```
 Response Format
-```json
+```
 {
     "size": Integer,
     "showinglist": [
@@ -172,7 +172,7 @@ Request URI
 GET /api/showings/cinema/{cinemaId}/date/{date}movie/{movieId}
 ```
 Response Format
-```json
+```
 {
     "size": Integer,
     "showingIdList": [String, String...]
@@ -187,7 +187,7 @@ Request URI
 POST /api/tickets/order
 ```
 Request Format
-```json
+```
 {
 	"showingId":String,
 	"userId":String,
@@ -197,7 +197,7 @@ Request Format
 ```
 
 Response Format
-```json
+```
 {
 	"ticketsId":[String, String...],
 	"seats":[[Integer, Integer],[Integer, Integer]...]
@@ -210,7 +210,7 @@ Request URI
 GET /api/tickets/user/{userid}
 ```
 Response Format
-```json
+```
 {
 	"size":Integer
 	"seatsSoldList":[[Integer,Integer],[Integer, Integer]...]
@@ -224,7 +224,7 @@ Request URI
 GET /api/tickets/user/{userid}
 ```
 Response Format
-```json
+```
 {
 	"size":Integer
 	"ticketsIdList":[String, String...]
@@ -237,7 +237,7 @@ Request URI
 GET /api/tickets/{id}
 ```
 Response Format
-```json
+```
 {
 	"showingId":String,
 	"seat":[Integer, Integer]
@@ -254,7 +254,7 @@ Request URI
 GET /api/users/{id}
 ```
 Response Format
-```json
+```
 {
 	"id":String
 	"name":String
@@ -273,7 +273,7 @@ Request URL
 POST /api/users/register
 ```
 Response Format
-```json
+```
 {
 	"phone":String
 	"name":String
@@ -287,7 +287,7 @@ Request URL
 POST /api/users/login
 ```
 Response Format
-```json
+```
 {
 	"name":String
 	"password":String
@@ -300,11 +300,8 @@ Request URL
 GET /api/users/{phone}
 ```
 Response Format
-```json
+```
 {
 	"exits":Boolean
 }
 ```
-
-
-
