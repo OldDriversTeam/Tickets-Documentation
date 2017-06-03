@@ -1,10 +1,23 @@
 # 总览
+## 系统源码
+
+- 前端 [Tickets-Client](https://github.com/OldDriversTeam/Tickets-Client)
+- 后端 [Tickets-Server](https://github.com/OldDriversTeam/Tickets-Server)
+
+## 文档
+
+API文档[API-description](API-description.mdown)
+
+已提交的文档[docs](./docs)
+
+设计的各种模型[models](./models)
+
 
 ## 工作安排
 
 第一次迭代
 
-略
+学习知识，完成原型
 
 第二次迭代
 
@@ -19,20 +32,7 @@
 - 521： 系统分析与设计：领域模型，数据库模型，状态模型（UMLet、PowerDesigner等工具）
 - 517： 前后端编码测试、持续集成
 
-## 系统源码
-
-- 前端 [Tickets-Client](https://github.com/OldDriversTeam/Tickets-Client)
-- 后端 [Tickets-Server](https://github.com/OldDriversTeam/Tickets-Server)
-
-## 文档
-
-
-[./docs](./docs)        --已提交的文档
-
-[./models](./models)    --设计的各种模型
-
-
-## 迭代过程
+## 迭代日志
 
 ### 第一次迭代：幽梦之灵
 
