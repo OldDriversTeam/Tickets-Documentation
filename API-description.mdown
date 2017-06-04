@@ -15,7 +15,7 @@
 	- [购票](#购票)
 	- [根据电影演出id获取已售电影票座位列表](#根据电影演出id获取已售电影票座位列表)
 	- [根据用户id查询已购电影票列表](#根据用户id查询已购电影票列表)
-	- [根据id查询用户信息](根据id查询用户信息)
+	- [根据id查询用户信息](#根据id查询用户信息)
 - [User用户类](#User用户类)
 	- [注册](#注册)
 	- [登陆](#登陆)
@@ -53,7 +53,7 @@ Response Format
 	"name":String,
 	"address":String,
 	"phone":String,
-	"cityId":String
+	"cityName":String
 }
 ```
 <a name="Movie电影类"></a>
@@ -69,7 +69,7 @@ Response Format
 {
 	"id":String,
 	"name":String,
-	"release_date":String,
+	"releaseDate":String,
 	"storyLine":String,
 	"detai":String,
 	"poster":String,
