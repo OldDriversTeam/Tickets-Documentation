@@ -34,7 +34,8 @@ http://211.159.183.245:8080/tickets/
 
 <a name="状态码和错误码"></a>
 #### state and errorCode in Message
-
+### Warning:状态码和错误码暂时不使用
+### TODO:需要重构
 |state|   detail       |
 |-----|----------------|
 |200  |succeed         |
