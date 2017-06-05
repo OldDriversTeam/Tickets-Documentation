@@ -1,3 +1,5 @@
+CREATE DATABASE  IF NOT EXISTS `ticketsdb` /*!40100 DEFAULT CHARACTER SET utf8 */;
+USE `ticketsdb`;
 -- MySQL dump 10.13  Distrib 5.7.17, for Win64 (x86_64)
 --
 -- Host: localhost    Database: ticketsdb
@@ -115,16 +117,14 @@ DROP TABLE IF EXISTS `movie`;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `movie` (
   `movie_id` varchar(100) NOT NULL,
-  `movie_name` varchar(100) NOT NULL,
-  `movie_release_date` varchar(100) DEFAULT NULL,
+  `movie_releaseDate` varchar(100) DEFAULT NULL,
   `movie_storyline` varchar(1000) DEFAULT NULL,
   `movie_detail` varchar(999) DEFAULT NULL,
   `movie_poster` varchar(9999) DEFAULT NULL,
   `movie_avgScore` float DEFAULT NULL,
   `movie_isShow` tinyint(1) DEFAULT NULL,
   `movie_type_id` varchar(100) NOT NULL,
-  `avgScore` float DEFAULT NULL,
-  `moive_name` varchar(255) DEFAULT NULL,
+  `movie_name` varchar(255) DEFAULT NULL,
   PRIMARY KEY (`movie_id`),
   KEY `fk_movie_movieType1_idx` (`movie_type_id`),
   CONSTRAINT `FK2b5ikg76gp4rgbiptqm68ejww` FOREIGN KEY (`movie_type_id`) REFERENCES `movietype` (`movie_type_id`),
@@ -138,7 +138,7 @@ CREATE TABLE `movie` (
 
 LOCK TABLES `movie` WRITE;
 /*!40000 ALTER TABLE `movie` DISABLE KEYS */;
-INSERT INTO `movie` VALUES ('m1','加勒比海盗5：死无对证','2017-05-26','杰克船长（约翰尼·德普饰）发现令人闻风丧胆的萨拉查船长 （哈维尔·巴登饰）竟率领着一众夺命亡灵水手逃出了百慕大三角区。他们扬言要杀尽世上所有的海盗，头号目标就是杰克船长。要想改写命运，杰克船长唯一的希望就是找到传说中海神波塞冬的三叉戟，拥有它就能拥有统治整个海洋的力量。为了寻获这件神器，杰克船长被迫和聪明美丽的天文学家卡琳娜·史密斯（卡雅·斯考达里奥饰）以及固执的年轻皇家海军亨利（布兰顿·思怀兹饰）联手出击。航行着他那破破烂烂的“黑珍珠”号，杰克船长不但决心要改变自己的厄运，同时也力求能从史上最狠毒可怕的敌人那里捡回一条命','中文名 加勒比海盗5：死无对证  外文名 Pirates of the Caribbean: Dead Men Tell No Tales/Salazar\'s Revenge  其它译名 死无对证、亡灵的缄默、亡者无言、死人不会告密、萨拉查的复仇  出品时间 2017年 出品公司 迪士尼影片公司、杰瑞·布鲁克海默电影公司 发行公司 迪士尼影片公司 制片地区 美国 制片成本 3亿美元（估） 拍摄地点 昆士兰、澳大利亚 拍摄日期 2015年 导    演乔阿吉姆·罗恩尼、艾斯彭·山德伯格 编    剧斯图尔特·比蒂、泰德·埃里奥特、杰夫·内桑森、特里·鲁西奥 制片人杰瑞·布鲁克海默 类    型 动作、奇幻、冒险、探险 主    演约翰尼·德普，奥兰多·布鲁姆，杰弗里·拉什，哈维尔·巴登，布兰顿·思怀兹，卡雅·斯考达里奥，凯文·麦克纳利 片    长 129分钟 上映时间 2017年5月26日(中国大陆/美国)  分    级 PG-13  对白语言 英语 色    彩 彩色 imdb编码 tt1790809','https://img3.doubanio.com/view/photo/photo/public/p2459723975.webp',9.5,1,'mt1'),('m2','摔跤吧！爸爸','2017-05-05','马哈维亚·辛格·珀尕是印度国家摔跤冠军，却因生活所迫放弃摔跤。他希望儿子可以帮他完成梦想——为印度赢得世界级金牌。不料命运捉弄让他生了四个女儿，偶然的机会他开始教女儿摔跤，努力使女儿变成世界级的摔跤手，期间趣事多多，但也由此引发了一连串有关舆论、宗教等社会话题的事件，尽管有极大的困难，最终大女儿们进入英联邦摔跤比赛并夺得冠军','中文名 摔跤吧！爸爸 外文名 Dangal 出品时间 2016年 出品公司 Aamir Khan Productions Ltd. 发行公司 UTV Motion Pictures 制片地区 印度 拍摄地点 印度 导    演尼特什·提瓦瑞 编    剧 比于什·古普塔、施热亚·简、尼特什·提瓦瑞 类    型 剧情、喜剧、传记、运动 主    演阿米尔·汗，萨卡诗·泰瓦，桑亚·玛荷塔，法缇玛·萨那·纱卡 片    长 169分钟 上映时间 2016年12月23日（印度）2017年5月5日（中国） 对白语言 北印度语 色    彩 彩色 主要奖项 第62届印度电影观众奖','https://img3.doubanio.com/view/photo/photo/public/p2457983084.webp',9.7,1,'mt2'),('m3','异星觉醒','2017-05-19','人类发现了一个火星上的生命体，宇航员们试图在空间站唤醒这个活体细胞并研究它，希望确保安全后把它带到地球。然而唤醒这个神秘外星生命后，未知的巨大灾难也随之而来。太空和急诊医学专家方凯文博士以及基因学专家亚当·卢瑟福博士，一切从发现外星生命开始。这个来自火星的幸存生命细胞既是肌肉又是大脑，它可能是有史以来最厉害的外星怪物，而唤醒它不仅威胁着空间站里每个宇航员的生命','中文名 异星觉醒 外文名 Life 其它译名 生命 发行公司 哥伦比亚电影公司[1]  制片地区 美国 导    演丹尼尔·伊斯皮诺萨 编    剧略特·里斯、保罗·韦尼克 类    型 科幻、灾难片 主    演杰克·吉伦哈尔，丽贝卡·弗格森，瑞安·雷诺兹，真田广之 上映时间 2017年3月24日（美国）[1]  对白语言 英语 色    彩 彩色 imdb编码 tt5442430','https://img3.doubanio.com/view/photo/photo/public/p2459315005.webp',7.8,1,'mt3');
+INSERT INTO `movie` VALUES ('m1','2017-05-26','杰克船长（约翰尼·德普饰）发现令人闻风丧胆的萨拉查船长 （哈维尔·巴登饰）竟率领着一众夺命亡灵水手逃出了百慕大三角区。他们扬言要杀尽世上所有的海盗，头号目标就是杰克船长。要想改写命运，杰克船长唯一的希望就是找到传说中海神波塞冬的三叉戟，拥有它就能拥有统治整个海洋的力量。为了寻获这件神器，杰克船长被迫和聪明美丽的天文学家卡琳娜·史密斯（卡雅·斯考达里奥饰）以及固执的年轻皇家海军亨利（布兰顿·思怀兹饰）联手出击。航行着他那破破烂烂的“黑珍珠”号，杰克船长不但决心要改变自己的厄运，同时也力求能从史上最狠毒可怕的敌人那里捡回一条命','中文名 加勒比海盗5：死无对证  外文名 Pirates of the Caribbean: Dead Men Tell No Tales/Salazar\'s Revenge  其它译名 死无对证、亡灵的缄默、亡者无言、死人不会告密、萨拉查的复仇  出品时间 2017年 出品公司 迪士尼影片公司、杰瑞·布鲁克海默电影公司 发行公司 迪士尼影片公司 制片地区 美国 制片成本 3亿美元（估） 拍摄地点 昆士兰、澳大利亚 拍摄日期 2015年 导    演乔阿吉姆·罗恩尼、艾斯彭·山德伯格 编    剧斯图尔特·比蒂、泰德·埃里奥特、杰夫·内桑森、特里·鲁西奥 制片人杰瑞·布鲁克海默 类    型 动作、奇幻、冒险、探险 主    演约翰尼·德普，奥兰多·布鲁姆，杰弗里·拉什，哈维尔·巴登，布兰顿·思怀兹，卡雅·斯考达里奥，凯文·麦克纳利 片    长 129分钟 上映时间 2017年5月26日(中国大陆/美国)  分    级 PG-13  对白语言 英语 色    彩 彩色 imdb编码 tt1790809','https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1496684387070&di=ce008c481a8cae4c5b3b953e80da9a9d&imgtype=0&src=http%3A%2F%2Fnpic7.edushi.com%2Fcn%2Fzixun%2Fzh-chs%2F2017-04%2F26%2Fe17ff2d2b84d44a296c17ab3a4dcfa12.jpg',9.5,1,'mt1','加勒比海盗5:死无对证'),('m2','2017-05-05','马哈维亚·辛格·珀尕是印度国家摔跤冠军，却因生活所迫放弃摔跤。他希望儿子可以帮他完成梦想——为印度赢得世界级金牌。不料命运捉弄让他生了四个女儿，偶然的机会他开始教女儿摔跤，努力使女儿变成世界级的摔跤手，期间趣事多多，但也由此引发了一连串有关舆论、宗教等社会话题的事件，尽管有极大的困难，最终大女儿们进入英联邦摔跤比赛并夺得冠军','中文名 摔跤吧！爸爸 外文名 Dangal 出品时间 2016年 出品公司 Aamir Khan Productions Ltd. 发行公司 UTV Motion Pictures 制片地区 印度 拍摄地点 印度 导    演尼特什·提瓦瑞 编    剧 比于什·古普塔、施热亚·简、尼特什·提瓦瑞 类    型 剧情、喜剧、传记、运动 主    演阿米尔·汗，萨卡诗·泰瓦，桑亚·玛荷塔，法缇玛·萨那·纱卡 片    长 169分钟 上映时间 2016年12月23日（印度）2017年5月5日（中国） 对白语言 北印度语 色    彩 彩色 主要奖项 第62届印度电影观众奖','https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1497279158&di=93d4efa01607f31480842dc2b230966c&imgtype=jpg&er=1&src=http%3A%2F%2Fcnews.chinadaily.com.cn%2Fimg%2Fattachement%2Fjpg%2Fsite1%2F20170110%2Fa41f726b573a19dee99d2e.jpg',9.7,1,'mt2','摔跤吧!爸爸'),('m3','2017-05-19','人类发现了一个火星上的生命体，宇航员们试图在空间站唤醒这个活体细胞并研究它，希望确保安全后把它带到地球。然而唤醒这个神秘外星生命后，未知的巨大灾难也随之而来。太空和急诊医学专家方凯文博士以及基因学专家亚当·卢瑟福博士，一切从发现外星生命开始。这个来自火星的幸存生命细胞既是肌肉又是大脑，它可能是有史以来最厉害的外星怪物，而唤醒它不仅威胁着空间站里每个宇航员的生命','中文名 异星觉醒 外文名 Life 其它译名 生命 发行公司 哥伦比亚电影公司[1]  制片地区 美国 导    演丹尼尔·伊斯皮诺萨 编    剧略特·里斯、保罗·韦尼克 类    型 科幻、灾难片 主    演杰克·吉伦哈尔，丽贝卡·弗格森，瑞安·雷诺兹，真田广之 上映时间 2017年3月24日（美国）[1]  对白语言 英语 色    彩 彩色 imdb编码 tt5442430','https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1496684471010&di=f7798e23f41a9f52d62fc52945f321bc&imgtype=0&src=http%3A%2F%2Fimages.china.cn%2Fattachement%2Fpng%2Fsite1007%2F20170228%2Fb8aeed9904561a1f31ea0b.png',7.8,1,'mt3','异星觉醒');
 /*!40000 ALTER TABLE `movie` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -231,7 +231,7 @@ CREATE TABLE `room` (
 
 LOCK TABLES `room` WRITE;
 /*!40000 ALTER TABLE `room` DISABLE KEYS */;
-INSERT INTO `room` VALUES ('r1','一号厅','3D',20,50,'c1'),('r2','二号厅','3D',15,30,'c1');
+INSERT INTO `room` VALUES ('r1','一号厅','3D',20,50,'c1'),('r2','二号厅','3D',15,30,'c1'),('r3','VIPROOm','2d',5,10,'c2');
 /*!40000 ALTER TABLE `room` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -245,9 +245,10 @@ DROP TABLE IF EXISTS `showing`;
 CREATE TABLE `showing` (
   `showing_id` varchar(100) NOT NULL,
   `showing_date` varchar(100) NOT NULL,
+  `showing_time` varchar(100) NOT NULL,
+  `showing_price` float NOT NULL,
   `room_id` varchar(100) NOT NULL,
   `movie_id` varchar(100) NOT NULL,
-  `date` varchar(255) DEFAULT NULL,
   PRIMARY KEY (`showing_id`),
   KEY `fk_show_room1_idx` (`room_id`),
   KEY `fk_show_movie1_idx` (`movie_id`),
@@ -264,7 +265,7 @@ CREATE TABLE `showing` (
 
 LOCK TABLES `showing` WRITE;
 /*!40000 ALTER TABLE `showing` DISABLE KEYS */;
-INSERT INTO `showing` VALUES ('s1','2017-05-26-10-30','r1','m1',NULL),('s2','2017-05-27-20-30','r2','m2',NULL);
+INSERT INTO `showing` VALUES ('s1','2017-05-26','10-30-00',40,'r1','m1'),('s2','2017-05-27','20-30-00',35,'r2','m2'),('s3','2017-06-07','10-00-00',60,'r1','m1'),('s4','2017-05-26','17-00-00',10,'r3','m1');
 /*!40000 ALTER TABLE `showing` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -279,13 +280,13 @@ CREATE TABLE `ticket` (
   `ticket_id` varchar(100) NOT NULL,
   `ticket_seatColNum` int(11) NOT NULL,
   `ticket_seatRowNum` int(11) DEFAULT NULL,
-  `ticket_price` float NOT NULL,
-  `ticket_issold` tinyint(1) NOT NULL,
+  `ticket_isSold` tinyint(1) NOT NULL,
   `showing_id` varchar(100) NOT NULL,
   `user_id` varchar(100) NOT NULL,
   PRIMARY KEY (`ticket_id`),
   KEY `fk_ticket_show1_idx` (`showing_id`),
   KEY `fk_ticket_user1_idx` (`user_id`),
+  CONSTRAINT `FKdvt57mcco3ogsosi97odw563o` FOREIGN KEY (`user_id`) REFERENCES `user` (`user_id`),
   CONSTRAINT `FKqot0hu7iv6bxhxdquxtcue4fn` FOREIGN KEY (`showing_id`) REFERENCES `showing` (`showing_id`),
   CONSTRAINT `fk_ticket_show1` FOREIGN KEY (`showing_id`) REFERENCES `showing` (`showing_id`) ON DELETE NO ACTION ON UPDATE NO ACTION,
   CONSTRAINT `fk_ticket_user1` FOREIGN KEY (`user_id`) REFERENCES `user` (`user_id`) ON DELETE NO ACTION ON UPDATE NO ACTION
@@ -298,7 +299,7 @@ CREATE TABLE `ticket` (
 
 LOCK TABLES `ticket` WRITE;
 /*!40000 ALTER TABLE `ticket` DISABLE KEYS */;
-INSERT INTO `ticket` VALUES ('s1r1t55',5,5,38.5,1,'s1','123',NULL),('s1r1t56',5,6,38.5,1,'s1','123',NULL),('s2r2t78',7,8,40,1,'s2','124',NULL);
+INSERT INTO `ticket` VALUES ('s1r1t55',5,5,1,'s1','123'),('s1r1t56',5,6,1,'s1','123'),('s2r2t78',7,8,1,'s2','124');
 /*!40000 ALTER TABLE `ticket` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -342,4 +343,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2017-06-03 19:56:30
+-- Dump completed on 2017-06-06  0:47:50

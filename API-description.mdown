@@ -130,7 +130,7 @@ Response Format
 ```
 {
 	"id":String,
-	"type":String,
+	"name":String,
 	"col":String,
 	"row":String,
 	"cinemaId":String
