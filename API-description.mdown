@@ -199,15 +199,15 @@ Request Format
 Response Format
 ```
 {
-	"ticketsId":[String, String...],
-	"seats":[[Integer, Integer],[Integer, Integer]...]
+	"size":Integer,
+	"ticketIds":[String, String...]
 }
 ```
 <a name="根据电影演出id获取已售电影票座位列表"></a>
 ### 根据电影演出id获取已售电影票座位列表
 Request URI
 ```
-GET /api/tickets/user/{userid}
+GET /api/tickets/showing/{showingId}
 ```
 Response Format
 ```
@@ -272,7 +272,7 @@ Request URL
 ```
 POST /api/users/register
 ```
-Response Format
+Request Format
 ```
 {
 	"phone":String
@@ -280,17 +280,29 @@ Response Format
 	"password":String
 }
 ```
+Response Format
+```
+{
+	"id":String
+}
+```
 <a name="登陆"></a>
-### 登陆
+### 手机号和密码登陆
 Request URL
 ```
 POST /api/users/login
 ```
+Request Format
+```
+{
+	"phone":String
+	"password":String
+}
+```
 Response Format
 ```
 {
-	"name":String
-	"password":String
+	"id":String
 }
 ```
 <a name="检查手机后是否已注册"></a>
@@ -303,5 +315,29 @@ Response Format
 ```
 {
 	"exits":Boolean
+}
+```
+### 更新用户信息
+Request URL
+```
+GET /api/users/update
+```
+Request Format
+```
+{
+	"id":String
+	"name":String
+	"password":String
+	"gender":String
+	"age":String
+	"phone":String
+	"email":String
+	"avatar":String
+}
+```
+Response Format
+```
+{
+	"result":Boolean
 }
 ```
