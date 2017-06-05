@@ -1,3 +1,13 @@
+## 访问根路径
+- hshhuan的校园网主机地址(需要叫我运行)
+```
+http://172.18.71.226:8080
+```
+- 腾讯云服务器地址（持续运行）
+```
+http://211.159.183.245:8080/tickets/
+```
+
 ## API
 - [状态码和错误码](#状态码和错误码)
 - [Cinema影院类](#Cinema影院类)
@@ -20,6 +30,7 @@
 	- [注册](#注册)
 	- [登陆](#登陆)
 	- [检查手机后是否已注册](#检查手机后是否已注册)
+	- [更新用户信息](#更新用户信息)
 
 <a name="状态码和错误码"></a>
 #### state and errorCode in Message
@@ -92,12 +103,14 @@ Response Format
 "movieList": [
         {
             "id": String,
-            "name": String
+            "name": String,
+			"avgScore":Float
 			"poster":String
         },
 		{
             "id": String,
-            "name": String
+            "name": String,
+			"avgScore":Float
 			"poster":String
         },
 		...
@@ -115,10 +128,10 @@ GET /api/rooms/{id}
 Response Format
 ```
 {
-	"id":String
-	"type":String
-	"col":String
-	"row":String
+	"id":String,
+	"type":String,
+	"col":String,
+	"row":String,
 	"cinemaId":String
 }
 ```
@@ -133,12 +146,12 @@ GET /api/showings/{id}
 Response Format
 ```
 {
-	"id":String
-	"date":String
-	"time":String
-	"price":String
-	"movieId":String
-	"cinemaId":String
+	"id":String,
+	"date":String,
+	"time":String,
+	"price":String,
+	"movieId":String,
+	"cinemaId":String,
 	"roomId":String
 }
 ```
@@ -212,7 +225,7 @@ GET /api/tickets/showing/{showingId}
 Response Format
 ```
 {
-	"size":Integer
+	"size":Integer,
 	"seatsSoldList":[[Integer,Integer],[Integer, Integer]...]
 }
 ```
@@ -226,8 +239,8 @@ GET /api/tickets/user/{userid}
 Response Format
 ```
 {
-	"size":Integer
-	"ticketsIdList":[String, String...]
+	"size":Integer,
+	"ticketIdsList":[String, String...]
 }
 ```
 <a name="根据id查询已购电影票详情"></a>
@@ -256,13 +269,13 @@ GET /api/users/{id}
 Response Format
 ```
 {
-	"id":String
-	"name":String
-	"password":String
-	"gender":String
-	"age":String
-	"phone":String
-	"email":String
+	"id":String,
+	"name":String,
+	"password":String,
+	"gender":String,
+	"age":String,
+	"phone":String,
+	"email":String,
 	"avatar":String
 }
 ```
@@ -317,6 +330,7 @@ Response Format
 	"exits":Boolean
 }
 ```
+<a name="更新用户信息"></a>
 ### 更新用户信息
 Request URL
 ```
