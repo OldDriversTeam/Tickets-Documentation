@@ -83,7 +83,7 @@ Response Format
 	"name":String,
 	"releaseDate":String,
 	"storyLine":String,
-	"detai":String,
+	"detail":String,
 	"poster":String,
 	"avgScore":String,
 	"isShow":Boolean,
@@ -162,20 +162,38 @@ Request URI
 ```
 GET /api/showings/movie/{movieId}
 ```
+**返回今天和明天两天的排期**
 Response Format
 ```
 {
     "size": Integer,
     "showinglist": [
         {
-            "date": String,
-            "cinemaIdList": [String, String]
+            "date": String, //今天
+            "cinemaList": [
+				{
+				"id":String,
+				"name":String
+				},
+				{
+				"id":String, 
+				"name":String
+				}
+			]
         },
 		{
-            "date": String,
-            "cinemaIdList": [String, String]
-        },
-		...
+            "date": String, //明天
+            "cinemaList": [
+				{
+				"id":String,
+				"name":String
+				},
+				{
+				"id":String, 
+				"name":String
+				}
+			]
+        }
     ]
 }
 ```
