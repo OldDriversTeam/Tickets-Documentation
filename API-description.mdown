@@ -311,7 +311,16 @@ Response Format
 ```
 {
 	"state":Integer
-	"id":String
+	"user":{
+		"id":String
+		"name":String
+		"password":String
+		"gender":String
+		"age":String
+		"phone":String
+		"email":String
+		"avatar":String
+	}
 }
 ```
 <a name="登陆"></a>
@@ -331,7 +340,16 @@ Response Format
 ```
 {
 	"state":Integer
-	"id":String
+	"user":{
+		"id":String
+		"name":String
+		"password":String
+		"gender":String
+		"age":String
+		"phone":String
+		"email":String
+		"avatar":String
+	}
 }
 ```
 <a name="检查手机后是否已注册"></a>
