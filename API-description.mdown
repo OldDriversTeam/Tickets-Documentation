@@ -9,7 +9,7 @@ http://211.159.183.245:8080/tickets/
 ```
 
 ## API
-- [状态码和错误码](#状态码和错误码)
+- [State状态码](#State状态码)
 - [Cinema影院类](#Cinema影院类)
  	- [根据id获取影院详情](#根据id获取影院详情)
 - [Movie电影类](#Movie电影类)
@@ -32,22 +32,15 @@ http://211.159.183.245:8080/tickets/
 	- [检查手机后是否已注册](#检查手机后是否已注册)
 	- [更新用户信息](#更新用户信息)
 
-<a name="状态码和错误码"></a>
-#### state and errorCode in Message
-### Warning:状态码和错误码暂时不使用
-### TODO:需要重构
-|state|   detail       |
-|-----|----------------|
-|200  |succeed         |
-|400  |failed          |
-
-|errorCode|   detail       |
+<a name="State状态码"></a>
+#### State 状态码
+|state	  |   detail       |
 |---------|----------------|
-|401  	  |name existed    |
-|402	  |phone existed   |
-|403      |email existed   |
-|404      |user not exist  |
-|405      |password error  |
+|200      |succeed		   |
+|400	  |failed		   |
+|401	  |phone existed   |
+|402      |user not exist  |
+|403      |wrong password  |
 
 
 <a name="Cinema影院类"></a>
@@ -105,14 +98,16 @@ Response Format
         {
             "id": String,
             "name": String,
-			"avgScore":Float
-			"poster":String
+			"avgScore":Float,
+			"poster":String,
+			"storyLine":String,
         },
 		{
             "id": String,
             "name": String,
-			"avgScore":Float
-			"poster":String
+			"avgScore":Float,
+			"poster":String,
+			"storyLine":String,
         },
 		...
     ]
@@ -315,6 +310,7 @@ Request Format
 Response Format
 ```
 {
+	"state":Integer
 	"id":String
 }
 ```
@@ -334,6 +330,7 @@ Request Format
 Response Format
 ```
 {
+	"state":Integer
 	"id":String
 }
 ```
@@ -371,6 +368,6 @@ Request Format
 Response Format
 ```
 {
-	"result":Boolean
+	"state":Integer
 }
 ```
