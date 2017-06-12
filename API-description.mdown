@@ -264,10 +264,16 @@ Response Format
   "size": Integer,
   "ticketList": [
     {
-		"id":String,
+		"showingId":String
+		"movieName": String,
+		"movieType": String,
+		"moviePoster": String,
+		"cinemaName": String,
+		"roomName": String,
+		"date": String, //2017-06-12 
+		"time":String,  //20-12-00
 		"seatColNum":Integer,
 		"seatRowNum":Integer,
-		"showingId":String
     }
 	...
   ]
