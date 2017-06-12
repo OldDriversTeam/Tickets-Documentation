@@ -202,7 +202,14 @@ Response Format
 ```
 {
     "size": Integer,
-    "showingIdList": [String, String...]
+    "showingList": [
+      {
+        "time": String, //比如20:00
+        "price": String,
+        "roomId": String,
+        "roomName": String, //比如1号厅
+      }
+    ]
 }
 ```
 <a name="Ticket电影票类"></a>
