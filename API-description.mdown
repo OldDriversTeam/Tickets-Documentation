@@ -262,16 +262,14 @@ Response Format
 ```
 {
   "size": Integer,
-  "ticketIdsList": [
+  "ticketList": [
     {
-      movieName: String,
-      movieType: String,
-      moviePoster: String,
-      cinemaName: String,
-      roomName: String,
-      date: String, //详细时间 2017-06-12 20-12-00
-      seats: [[Integer, Integer], [Integer, Integer]...]
+		"id":String,
+		"seatColNum":Integer,
+		"seatRowNum":Integer,
+		"showingId":String
     }
+	...
   ]
 }
 
