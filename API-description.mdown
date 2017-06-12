@@ -261,9 +261,20 @@ GET /api/tickets/user/{userid}
 Response Format
 ```
 {
-	"size":Integer,
-	"ticketIdsList":[String, String...]
+  "size": Integer,
+  "ticketIdsList": [
+    {
+      movieName: String,
+      movieType: String,
+      moviePoster: String,
+      cinemaName: String,
+      roomName: String,
+      date: String, //详细时间 2017-06-12 20-12-00
+      seats: [[Integer, Integer], [Integer, Integer]...]
+    }
+  ]
 }
+
 ```
 <a name="根据id查询已购电影票详情"></a>
 ### 根据id查询已购电影票详情
