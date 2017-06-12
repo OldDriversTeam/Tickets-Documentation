@@ -196,7 +196,7 @@ Response Format
 ### 获取某个影院、某个日期、某个电影的电影演出列表
 Request URI
 ```
-GET /api/showings/cinema/{cinemaId}/date/{date}movie/{movieId}
+GET /api/showings/cinema/{cinemaId}/date/{date}/movie/{movieId}
 ```
 Response Format
 ```
