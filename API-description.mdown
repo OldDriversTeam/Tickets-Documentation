@@ -204,6 +204,7 @@ Response Format
     "size": Integer,
     "showingList": [
       {
+      	"showingId": String,
         "time": String, //比如20:00
         "price": String,
         "roomId": String,
