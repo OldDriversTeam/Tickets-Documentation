@@ -113,6 +113,32 @@ Response Format
     ]
 }
 ```
+
+<a name="获取首页滚动热映电影列表"></a>
+### 获取首页滚动热映电影列表
+
+Request URI
+```
+GET /api/movies/cover
+```
+Response Format
+```
+{
+"size":Interger,
+"movieList": [
+        {
+            "id": String,
+            "cover": String
+        },
+		{
+            "id": String,
+            "cover": String
+        },
+		...
+    ]
+}
+```
+
 <a name="Room影厅类"></a>
 ## Room 影厅类
 <a name="根据id获取影厅详情"></a>
