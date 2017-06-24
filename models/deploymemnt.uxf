@@ -17,20 +17,8 @@ back-end server
   <element>
     <id>UMLDeployment</id>
     <coordinates>
-      <x>250</x>
-      <y>270</y>
-      <w>160</w>
-      <h>340</h>
-    </coordinates>
-    <panel_attributes>&lt;&lt;proxy&gt;&gt;
-proxy server</panel_attributes>
-    <additional_attributes/>
-  </element>
-  <element>
-    <id>UMLDeployment</id>
-    <coordinates>
-      <x>70</x>
-      <y>400</y>
+      <x>180</x>
+      <y>330</y>
       <w>110</w>
       <h>90</h>
     </coordinates>
@@ -40,24 +28,9 @@ client
     <additional_attributes/>
   </element>
   <element>
-    <id>UMLGeneric</id>
-    <coordinates>
-      <x>270</x>
-      <y>340</y>
-      <w>100</w>
-      <h>240</h>
-    </coordinates>
-    <panel_attributes>symbol=component
-
-
-
-nginx</panel_attributes>
-    <additional_attributes/>
-  </element>
-  <element>
     <id>UMLDeployment</id>
     <coordinates>
-      <x>460</x>
+      <x>400</x>
       <y>270</y>
       <w>150</w>
       <h>170</h>
@@ -69,7 +42,7 @@ front-end server</panel_attributes>
   <element>
     <id>UMLGeneric</id>
     <coordinates>
-      <x>490</x>
+      <x>430</x>
       <y>340</y>
       <w>80</w>
       <h>70</h>
@@ -92,31 +65,6 @@ web app</panel_attributes>
 
 
 REST service</panel_attributes>
-    <additional_attributes/>
-  </element>
-  <element>
-    <id>UMLDeployment</id>
-    <coordinates>
-      <x>460</x>
-      <y>460</y>
-      <w>150</w>
-      <h>160</h>
-    </coordinates>
-    <panel_attributes>&lt;&lt;server&gt;&gt;
-front-end server</panel_attributes>
-    <additional_attributes/>
-  </element>
-  <element>
-    <id>UMLGeneric</id>
-    <coordinates>
-      <x>490</x>
-      <y>530</y>
-      <w>80</w>
-      <h>70</h>
-    </coordinates>
-    <panel_attributes>symbol=component
-
-web app</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
@@ -148,57 +96,24 @@ mysql</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>170</x>
-      <y>430</y>
-      <w>120</w>
+      <x>280</x>
+      <y>360</y>
+      <w>170</w>
       <h>40</h>
     </coordinates>
     <panel_attributes>http</panel_attributes>
-    <additional_attributes>10.0;20.0;100.0;20.0</additional_attributes>
+    <additional_attributes>10.0;20.0;150.0;20.0</additional_attributes>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>360</x>
-      <y>370</y>
+      <x>540</x>
+      <y>360</y>
       <w>150</w>
-      <h>100</h>
+      <h>40</h>
     </coordinates>
     <panel_attributes>http</panel_attributes>
-    <additional_attributes>10.0;80.0;130.0;10.0</additional_attributes>
-  </element>
-  <element>
-    <id>Relation</id>
-    <coordinates>
-      <x>360</x>
-      <y>440</y>
-      <w>150</w>
-      <h>150</h>
-    </coordinates>
-    <panel_attributes>http</panel_attributes>
-    <additional_attributes>10.0;10.0;130.0;130.0</additional_attributes>
-  </element>
-  <element>
-    <id>Relation</id>
-    <coordinates>
-      <x>560</x>
-      <y>450</y>
-      <w>130</w>
-      <h>140</h>
-    </coordinates>
-    <panel_attributes>http</panel_attributes>
-    <additional_attributes>10.0;120.0;110.0;10.0</additional_attributes>
-  </element>
-  <element>
-    <id>Relation</id>
-    <coordinates>
-      <x>560</x>
-      <y>370</y>
-      <w>130</w>
-      <h>110</h>
-    </coordinates>
-    <panel_attributes>http</panel_attributes>
-    <additional_attributes>10.0;10.0;110.0;90.0</additional_attributes>
+    <additional_attributes>10.0;20.0;130.0;20.0</additional_attributes>
   </element>
   <element>
     <id>Relation</id>
@@ -210,5 +125,29 @@ mysql</panel_attributes>
     </coordinates>
     <panel_attributes>jdbc</panel_attributes>
     <additional_attributes>10.0;20.0;120.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLDeployment</id>
+    <coordinates>
+      <x>180</x>
+      <y>480</y>
+      <w>110</w>
+      <h>90</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;android&gt;&gt;
+client
+(app)</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>280</x>
+      <y>510</y>
+      <w>410</w>
+      <h>40</h>
+    </coordinates>
+    <panel_attributes>http</panel_attributes>
+    <additional_attributes>10.0;20.0;390.0;20.0</additional_attributes>
   </element>
 </diagram>

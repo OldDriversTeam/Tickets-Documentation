@@ -4,10 +4,10 @@
   <element>
     <id>UMLHierarchy</id>
     <coordinates>
-      <x>80</x>
+      <x>70</x>
       <y>80</y>
       <w>410</w>
-      <h>520</h>
+      <h>560</h>
     </coordinates>
     <panel_attributes>type=Package
 src
@@ -16,15 +16,17 @@ src
 			com.olddrivers.tickets
 				business
 					entities
-						repository
+						repositories
+					services
 				util
 				web
+					controllers
+						respondse
+					filter
 		resources
 			META-INF
 		webapp
-			WEB-INF
-	test
-		java.test</panel_attributes>
+			WEB-INF</panel_attributes>
     <additional_attributes/>
   </element>
 </diagram>
